@@ -32,23 +32,24 @@ function appendOperator(operator) {
     if (displayValue === 'Error') {
         displayValue = '0';
     }
-    
-    const currentValue = parseFloat(displayValue);
+
+    const currentValue = Number.parseFloat(displayValue);
     
     if (storedValue !== null && pendingOperator !== null) {
         const result = performCalculation(storedValue, currentValue, pendingOperator);
         expressionHistory = `${storedValue} ${getOperatorSymbol(pendingOperator)} ${currentValue} =`;
         displayValue = String(Math.round(result * 1000000000000) / 1000000000000);
-        storedValue = parseFloat(displayValue);
+        storedValue = Number.parseFloat(displayValue);
     } else {
         storedValue = currentValue;
     }
-    
+
     pendingOperator = operator;
     expressionHistory = `${displayValue} ${getOperatorSymbol(operator)}`;
     displayValue = '0';
     updateDisplay();
 }
+
 
 function getOperatorSymbol(op) {
     const symbols = {
@@ -63,8 +64,8 @@ function getOperatorSymbol(op) {
 }
 
 function scientificFunc(func) {
-    let currentValue = parseFloat(displayValue);
-    if (isNaN(currentValue)) currentValue = 0;
+    let currentValue = Number.parseFloat(displayValue);
+    if (Number.isNaN(currentValue)) currentValue = 0;
     
     let result;
     let funcName = '';
@@ -148,8 +149,8 @@ function scientificFunc(func) {
         default:
             return;
     }
-    
-    if (isNaN(result) || !isFinite(result)) {
+
+    if (Number.isNaN(result) || !Number.isFinite(result)) {
         showError('Error');
         return;
     }
@@ -161,7 +162,7 @@ function scientificFunc(func) {
 }
 
 function factorial(n) {
-    if (n < 0) return NaN;
+    if (n < 0) return Number.NaN;
     if (n === 0 || n === 1) return 1;
     if (n > 170) return Infinity;
     let result = 1;
@@ -176,7 +177,7 @@ function performCalculation(a, b, operator) {
         case '+': return a + b;
         case '-': return a - b;
         case '*': return a * b;
-        case '/': return b !== 0 ? a / b : NaN;
+        case '/': return b === 0 ? Number.NaN : a / b;
         case '%': return a % b;
         case 'pow': return Math.pow(a, b);
         default: return b;
@@ -188,11 +189,11 @@ function calculate() {
         return;
     }
 
-    const currentValue = parseFloat(displayValue);
+    const currentValue = Number.parseFloat(displayValue);
     const expression = `${storedValue} ${getOperatorSymbol(pendingOperator)} ${currentValue}`;
     const result = performCalculation(storedValue, currentValue, pendingOperator);
-    
-    if (isNaN(result) || !isFinite(result)) {
+
+    if (Number.isNaN(result) || !Number.isFinite(result)) {
         showError('Error');
         storedValue = null;
         pendingOperator = null;
@@ -262,7 +263,9 @@ function clearHistory() {
 function saveHistory() {
     try {
         localStorage.setItem('calculatorHistory', JSON.stringify(calculationHistory));
-    } catch (e) {}
+    } catch (e) {
+        console.error('Failed to save history:', e);
+    }
 }
 
 function loadHistory() {
@@ -272,7 +275,9 @@ function loadHistory() {
             calculationHistory = JSON.parse(saved);
             renderHistory();
         }
-    } catch (e) {}
+    } catch (e) {
+        console.error('Failed to load history:', e);
+    }
 }
 
 function clearDisplay() {
