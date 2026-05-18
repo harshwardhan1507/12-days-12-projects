@@ -60,6 +60,22 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 | 02  | To-do-list App  | [🔗 Netlify](https://todolistbyharuto.netlify.app/) |
 | 03  | Tempify  | [🔗 Netlify](https://tempifybyharuto.netlify.app/) |
 | 04  | FocusX - Pomodoro Timer  | [🔗 Netlify](https://focusxbyharuto.netlify.app/) |
+
+---
+
+## Upcoming Projects
+
+| Day | Project Name | Difficulty | Key Skills |
+|----:|--------------|-----------|-----------|
+| 05  | Scientific Calculator | ⭐⭐ | DOM Manipulation, Event Handling, Math Operations |
+| 06  | Weather App | ⭐⭐ | Fetch API, async/await, Dynamic Content |
+| 07  | Note-Taking App | ⭐⭐ | localStorage, CRUD Operations, Search |
+| 08  | Tic-Tac-Toe Game | ⭐⭐ | Game Logic, State Management, Event Handling |
+| 09  | Password Generator | ⭐ | String Manipulation, Randomization, Clipboard API |
+| 10  | Kanban Board | ⭐⭐⭐ | Drag & Drop API, Complex State, Event Delegation |
+| 11  | Quiz Application | ⭐⭐ | Timers, Progress Tracking, Scoring System |
+| 12  | Drawing Canvas | ⭐⭐ | Canvas API, Mouse Events, Drawing Algorithms |
+
 ---
 
 ## What I Am Learning
@@ -86,14 +102,14 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 - [x] Day 02 - To-do-list
 - [x] Day 03 - Tempify
 - [x] Day 04 - FocusX - Pomodoro Timer
-- [ ] Day 05
-- [ ] Day 06
-- [ ] Day 07
-- [ ] Day 08
-- [ ] Day 09
-- [ ] Day 10
-- [ ] Day 11
-- [ ] Day 12
+- [ ] Day 05 – Scientific Calculator
+- [ ] Day 06 – Weather App
+- [ ] Day 07 – Note-Taking App
+- [ ] Day 08 – Tic-Tac-Toe Game
+- [ ] Day 09 – Password Generator
+- [ ] Day 10 – Kanban Board
+- [ ] Day 11 – Quiz Application
+- [ ] Day 12 – Drawing Canvas
 
 ---
 
