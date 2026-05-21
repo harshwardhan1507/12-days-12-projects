@@ -45,7 +45,13 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 │   ├── style.css
 │   ├── script.js
 │   └── README.md
-|
+│
+├── Day-05-Calculator/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── README.md
+│
 ├── ...
 └── Day-12-Coming-Soon/
 ```
@@ -60,6 +66,7 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 | 02  | To-do-list App  | [🔗 Netlify](https://todolistbyharuto.netlify.app/) |
 | 03  | Tempify  | [🔗 Netlify](https://tempifybyharuto.netlify.app/) |
 | 04  | FocusX - Pomodoro Timer  | [🔗 Netlify](https://focusxbyharuto.netlify.app/) |
+| 05  | Scientific Calculator | [🔗 Project](./calculator/index.html) |
 
 ---
 
@@ -67,7 +74,6 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 
 | Day | Project Name | Difficulty | Key Skills |
 |----:|--------------|-----------|-----------|
-| 05  | Scientific Calculator | ⭐⭐ | DOM Manipulation, Event Handling, Math Operations |
 | 06  | Weather App | ⭐⭐ | Fetch API, async/await, Dynamic Content |
 | 07  | Note-Taking App | ⭐⭐ | localStorage, CRUD Operations, Search |
 | 08  | Tic-Tac-Toe Game | ⭐⭐ | Game Logic, State Management, Event Handling |
@@ -102,7 +108,7 @@ Each project focuses on solving a small, well-defined problem using **HTML, CSS,
 - [x] Day 02 - To-do-list
 - [x] Day 03 - Tempify
 - [x] Day 04 - FocusX - Pomodoro Timer
-- [ ] Day 05 – Scientific Calculator
+- [x] Day 05 – Scientific Calculator
 - [ ] Day 06 – Weather App
 - [ ] Day 07 – Note-Taking App
 - [ ] Day 08 – Tic-Tac-Toe Game
